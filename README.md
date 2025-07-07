@@ -42,6 +42,15 @@
  - GPT Search Bar
  -  (BONUS) Multi-language  Feature in our App
 
+ - GPT Search Gemini AI API key (openai not working)
+ - GPT Search API call
+ - fetched gptMovieSuggestions from TMDB
+ - creayed gptSlice added data
+ - Reused MovieList Component to make movie suggestion container
+ - Added .env file
+ - Adding .env file to gitignore
+ - Made our Site responsive
+
 
  - # We were using a secret key directly in the frontend, but moved it to a .env file (with REACT_APP_ prefix) to avoid hardcoding and expose it safely in a React environment.
  

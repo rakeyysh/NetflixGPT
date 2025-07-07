@@ -28,7 +28,7 @@ const GptSearchBar = () => {
 
   const handleGPTSearchClick = async () => {
     // console.log(searchText.current.value);
-    
+
     // Make an API call to GPT API and get Movie Results
 
     const gptQuery = `Act as a Movie Recommendation system. 
@@ -89,12 +89,12 @@ const GptSearchBar = () => {
 
   console.log(langKey);
   return (
-    <div className='pt-[10%] flex justify-center'>
+    <div className='pt-[45%] md:pt-[10%]  flex justify-center '>
       <form
-        className='bg-black w-1/2 grid grid-cols-12'
+        className='bg-black w-full md:w-1/2 grid grid-cols-12'
         onSubmit={(e) => e.preventDefault()}  // to prevent inbuit form submission in forms
       >
-        <input ref={searchText} type='text' className='p-4 m-4 col-span-9' placeholder={lang[langKey].gptSearchPlaceholder}></input>
+        <input ref={searchText} type='text' className='p-4 m-4 col-span-9 ' placeholder={lang[langKey].gptSearchPlaceholder}></input>
         <button className='py-2 px-4 m-4 bg-red-700 text-white rounded-lg col-span-3' onClick={handleGPTSearchClick}>{lang[langKey].search}</button>
 
 

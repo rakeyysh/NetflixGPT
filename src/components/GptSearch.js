@@ -5,13 +5,16 @@ import Netflix from '../utils/img/Netflix.jpg'
 
 const GptSearch = () => {
   return (
-    <div>
-       <div className="fixed -z-10">
-                <img src={Netflix} alt="background" />
-            </div>
-      <GptSearchBar/>
-      <GptMovieSuggestion/>
-    </div>
+    <>
+      <div className="fixed -z-10">
+        <img className="h-screen object-cover w-screen" src={Netflix} alt="background" />
+      </div>
+      <div className=''>
+
+        <GptSearchBar />
+        <GptMovieSuggestion />
+      </div>
+    </>
   )
 }
 
