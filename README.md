@@ -41,6 +41,9 @@
  - GPT Search Page
  - GPT Search Bar
  -  (BONUS) Multi-language  Feature in our App
+
+
+ - # We were using a secret key directly in the frontend, but moved it to a .env file (with REACT_APP_ prefix) to avoid hardcoding and expose it safely in a React environment.
  
 
 

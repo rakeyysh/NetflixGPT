@@ -13,11 +13,16 @@ export const LOGO =
     headers:{
         accept: "application/json",
         Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzAxOWNjYWQ0YjliYmI3NjRmNjBhNmZjMWUzYWM0YiIsIm5iZiI6MTc1MDk2NzcxNS43MzMsInN1YiI6IjY4NWRhNWEzMWE5NmMxMDI3MzdiM2Y0NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7vVS8bXngt3iD0zitb5Qlsu_9xK1DF6Sgnuq4UMM1YQ' 
-    },
+        'Bearer ' + process.env.REACT_APP_TMDB_BEARER
   
+    }
+ };
 
- }
+
+
+ 
+
+ console.log("TMDB Token:", process.env.REACT_APP_TMDB_BEARER);
 
  export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
@@ -30,3 +35,6 @@ export const LOGO =
     {identifier: "hindi",name: "Hindi"},
     {identifier: "spanish",name: "Spanish"},
  ]
+
+
+ export const OPENAI_KEY  = process.env.REACT_APP_OPENAI_KEY;
