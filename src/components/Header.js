@@ -86,7 +86,7 @@ const handleLanguageChange = (e) =>{
             {lang.name}</option>
           ))}
         </select>)}
-        <button className=' py-0 md:py-2 px-2 md:px-3 mx-4 bg-purple-800 text-white rounded-sm md:rounded text-sm' onClick={handleGptSearchClick}
+        <button className=' py-1 md:py-2 px-2 md:px-4 mx-4 my-3 bg-purple-800 text-white rounded-sm md:rounded text-sm' onClick={handleGptSearchClick}
         >
          {showGptSearch ? "HomePage" : "GPT Search"}</button>
          <div>
