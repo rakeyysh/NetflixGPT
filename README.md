@@ -1,6 +1,4 @@
-
-
-🎬 NetflixGPT
+## 🎬 NetflixGPT
 
 A Netflix-inspired movie browsing app powered by Gemini AI for smart movie recommendations. Built with React, Firebase, Redux, and Tailwind CSS.
 
@@ -49,33 +47,33 @@ TechnologyPurposeReact 19Frontend UIRedux ToolkitState managementFirebaseAuthent
 
 src/
 ├── components/
-│   ├── Body.js              # App router setup
-│   ├── Header.js            # Navbar with auth & GPT toggle
-│   ├── Login.js             # Sign In / Sign Up form
-│   ├── Browse.js            # Main browse page
-│   ├── MainConatiner.js     # Hero section with trailer
-│   ├── VideoBackground.js   # YouTube trailer iframe
-│   ├── VideoTitle.js        # Movie title & description overlay
-│   ├── SecondaryContainer.js # Movie lists section
-│   ├── MovieList.js         # Horizontal scrollable movie list
-│   ├── MovieCard.js         # Individual movie poster card
-│   ├── GptSearch.js         # GPT search page wrapper
-│   ├── GptSearchBar.js      # Search input + Gemini API call
-│   └── GptMovieSuggestion.js # AI recommended movie lists
+│   ├── Body.js                 # App router setup
+│   ├── Header.js               # Navbar with auth & GPT toggle
+│   ├── Login.js                # Sign In / Sign Up form
+│   ├── Browse.js               # Main browse page
+│   ├── MainConatiner.js        # Hero section with trailer
+│   ├── VideoBackground.js      # YouTube trailer iframe
+│   ├── VideoTitle.js           # Movie title & description overlay
+│   ├── SecondaryContainer.js   # Movie lists section
+│   ├── MovieList.js            # Horizontal scrollable movie list
+│   ├── MovieCard.js            # Individual movie poster card
+│   ├── GptSearch.js            # GPT search page wrapper
+│   ├── GptSearchBar.js         # Search input + Gemini API call
+│   └── GptMovieSuggestion.js   # AI recommended movie lists
 ├── hooks/
 │   ├── useNowPlayingMovies.js  # Fetches now playing movies
 │   ├── usePopularMovies.js     # Fetches popular movies
 │   └── useMovieTrailer.js      # Fetches trailer for a movie
 └── utils/
-    ├── appStore.js          # Redux store configuration
-    ├── userSlice.js         # User auth state
-    ├── moviesSlice.js       # Movies & trailer state
-    ├── gptSlice.js          # GPT search results state
-    ├── configSlice.js       # Language configuration
-    ├── firebase.js          # Firebase initialization
-    ├── constants.js         # API options, URLs, constants
-    ├── Validate.js          # Form validation logic
-    └── languageConstants.js # Multi-language text support
+    ├── appStore.js             # Redux store configuration
+    ├── userSlice.js            # User auth state
+    ├── moviesSlice.js          # Movies & trailer state
+    ├── gptSlice.js             # GPT search results state
+    ├── configSlice.js          # Language configuration
+    ├── firebase.js             # Firebase initialization
+    ├── constants.js            # API options, URLs, constants
+    ├── Validate.js             # Form validation logic
+    └── languageConstants.js    # Multi-language text support
 
 
 🚀 Getting Started
@@ -91,22 +89,16 @@ A Gemini API key → aistudio.google.com
 
 Installation
 
-
-Clone the repository
-
+1. Clone the repository
 
 bashgit clone https://github.com/your-username/NetflixGPT.git
 cd NetflixGPT
 
-
-Install dependencies
-
+2. Install dependencies
 
 bashnpm install
 
-
-Create a .env file in the root directory:
-
+3. Create a .env file in the root directory:
 
 envREACT_APP_TMDB_BEARER=your_tmdb_bearer_token
 REACT_APP_GEMINI_KEY=your_gemini_api_key
@@ -117,9 +109,7 @@ REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.firebasestorage.app
 REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 REACT_APP_FIREBASE_APP_ID=your_app_id
 
-
-Start the development server
-
+4. Start the development server
 
 bashnpm start
 
@@ -144,13 +134,13 @@ KeyWhere to get itREACT_APP_TMDB_BEARERthemoviedb.org → Settings → API → B
 📸 Screenshots
 
  Login Page
-![Login Page](public/screenshots/Login.png)
+![Login Page](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/screenshots/Login.png)
 
  Browse Page
-![Browse Page](public/screenshots/Browse.png)
+![Browse Page](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/screenshots/Browse.png)
 
  GPT Search
-![GPT Search](public/screenshots/Gemini-Search.png)
+![GPT Search](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/screenshots/Gemini-Search.png)
 
 
 🙋‍♂️ Author
@@ -163,6 +153,80 @@ Rakesh — GitHub · LinkedIn
 This project is for educational purposes.
 
 
+📝 Development Notes
+
+Features Built
+
+
+Create React App
+Configured TailwindCSS
+Header
+Login form
+Sign-up form
+Form Validation
+useRef Hook
+Firebase Setup
+Deploying our app to production
+Create SignUp User Account
+Implement Sign In user API
+Created Redux Store with userSlice
+Implemented Sign out
+Update profile
+BugFix: Sign up user displayName and profile picture update
+BugFix: if the user is not logged in Redirect/browse to Login Page and vice-versa
+Unsubscribed to the onAuthStateChanged callback
+Add hardcoded values to the constants file
+Register for TMDB API & create an app & get access token
+Get Data from TMDB now playing movies list API
+Custom Hook for Now Playing Movies
+Create movieSlice
+Update Store with movie Data
+Planning for MainContainer & SecondaryContainer
+Fetch Data from Trailer Video
+Update Store with Trailer Video Data
+Embedded the Youtube video and make it autoplay and mute
+Tailwind Classes to make main container look awesome
+Built Secondary Component
+Built Movie List
+Built Movie Card
+TMDB Image CDN URL
+Made the Browse page amazing with Tailwind CSS
+usePopularMovies Custom Hooks
+GPT Search Feature
+GPT Search Page
+GPT Search Bar
+(BONUS) Multi-language Feature in our App
+GPT Search Gemini AI API key (openai not working)
+GPT Search API call
+Fetched gptMovieSuggestions from TMDB
+Created gptSlice added data
+Reused MovieList Component to make movie suggestion container
+Added .env file
+Adding .env file to gitignore
+Made our Site responsive
+Moved secret keys from hardcoded to .env file (with REACT_APP_ prefix)
+
+
+App Structure
+
+Login/Sign Up
+
+
+Sign In / Sign up form
+Redirect to Browse Page
+
+
+Browse (after authentication)
+
+
+Header
+Main Movie
+
+Trailer in Background
+Title & Description
+Movie Suggestions
+
+MovieList x N
 
 
 
@@ -171,88 +235,8 @@ This project is for educational purposes.
 
 
 
+NetflixGPT
 
 
-
-
--------------------------------------------------------------------------------------
-
-...
-# 📝 Development Notes
-
-# Netflix GPT
-
- - Create React App
- - Configured TailwindCSS
- - Header
- - Login form
- - Sign-up form
- - Form Validation
- - useRef Hook
- - Firebase Setup
- - Deploying our app to production
- - Create SignUp User Account
- - Implement Sign In user API
- - Created Redux Store with userSlice
- - Implemented Sign out
- - Update profile
- - BugFix : Sign up user displayName and profile picture update
- - BugFix " if the user is not logged in Redirect/browse to Login Page and vice-versa
- - Unsubscribed to the onAuthStateChanged callback.
- - Add hardcoded values to the constants file.
- - Register for TMDB API & create an app & get access token
- - Get Data from TMDB now playing movies list API
- - Custom Hook for Now Playing Movies
- - Create movieSlice
- - update Store with movie Data
- - Planning for MainContainer & SecondaryContainer
- - Fetch Data from Trailer Video
- - Update Store with Trailer Video Data
- - Embedded the Youtube video and make it autoplay  and mute
- - Tailwind Classes  to make main container  look awesome.
-
- - Built Secondary Component
- - Built Movie List
- - Built Movie Card
- - TMDB Image CDN URL
- - Made the Browse page amazing with Tailwind CSS
- - usePopularMovies Custom Hooks
-
- - GPT Search Feature
- - GPT Search Page
- - GPT Search Bar
- -  (BONUS) Multi-language  Feature in our App
-
- - GPT Search Gemini AI API key (openai not working)
- - GPT Search API call
- - fetched gptMovieSuggestions from TMDB
- - creayed gptSlice added data
- - Reused MovieList Component to make movie suggestion container
- - Added .env file
- - Adding .env file to gitignore
- - Made our Site responsive
-
-
- - # We were using a secret key directly in the frontend, but moved it to a .env file (with REACT_APP_ prefix) to avoid hardcoding and expose it safely in a React environment.
- 
-
-
-
- # Features
-  - Login/Sign Up
-   - Sign In / Sign up form
-   - redirect to Browse Page
-
-
-  - Browse (after authentication)
-    - Header
-    - Main Movie
-       - Trailer in Background
-       - Title & Description
-       - MovieSuggestions
-         - MovieList * N
-
-  - NetflixGPT
-    - Search Bar
-    - Movie Suggestions.       
-
+Search Bar
+Movie Suggestions
