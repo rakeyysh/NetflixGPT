@@ -8,7 +8,7 @@ A Netflix-inspired movie browsing app powered by **Gemini AI** for smart movie r
 
 ## 🔗 Live Demo
 
-[View Live App](#) ← _replace with your Vercel URL_
+[View Live App]  netflix-gpt-eta-six.vercel.app 
 
 ---
 
