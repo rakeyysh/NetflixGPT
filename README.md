@@ -134,13 +134,13 @@ KeyWhere to get itREACT_APP_TMDB_BEARERthemoviedb.org → Settings → API → B
 📸 Screenshots
 
  Login Page
-![Login Page](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/screenshots/Login.png)
+![Login Page](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/Screenshots/Login.png)
 
  Browse Page
-![Browse Page](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/screenshots/Browse.png)
+![Browse Page](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/Screenshots/Browse.png)
 
  GPT Search
-![GPT Search](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/screenshots/Gemini-Search.png)
+![GPT Search](https://raw.githubusercontent.com/rakeyysh/NetflixGPT/main/public/Screenshots/Gemini-Search.png)
 
 
 🙋‍♂️ Author
