@@ -4,7 +4,6 @@ import { useRef, useState } from "react";
 import { checkValidData } from "../utils/Validate";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -14,9 +13,6 @@ const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
 
     const [errorMessage, setErrorMessage] = useState(null);
-
-    const navigate = useNavigate();
-
 
     const email = useRef(null);
     const password = useRef(null);
@@ -42,9 +38,8 @@ const Login = () => {
         if (!isSignInForm) {
             // Sign Up Logic
             createUserWithEmailAndPassword(auth, email.current.value, password.current.value,name.current.value)
-                .then((userCredential) => {
+                .then(() => {
                     // Signed up 
-                    const user = userCredential.user;
 
                     updateProfile(auth.currentUser, {
                         displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
@@ -75,10 +70,8 @@ const Login = () => {
             // Signed In Logic
 
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
-                .then((userCredential) => {
+                .then(() => {
                     // Signed in 
-                    const user = userCredential.user;
-                   
                     // ...
                 })
                 .catch((error) => {
@@ -95,7 +88,7 @@ const Login = () => {
         <div><Header />
 
             <div className="absolute">
-                <img className="h-screen object-cover" src={Netflix} alt="background" />
+                <img className="h-screen w-screen object-cover" src={Netflix} alt="background" />
             </div>
 
             <form onSubmit={(e) => e.preventDefault()} className="w-3/4 md:w-3/12 p-12 bg-black absolute my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">

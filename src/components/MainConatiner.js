@@ -7,12 +7,14 @@ const MainConatiner = () => {
 
     const movies = useSelector(store => store.movies?.nowPlayingMovies);
     if(movies == null) return;
-    const mainMovie = movies[0];
+    console.log("movies",movies);
+    const mainMovie  = movies[4];
+    if (!mainMovie) return null;
     // console.log(mainMovie);
     
    const{original_title,overview,id} = mainMovie;
     return (
-        <div className='pt-[30%] bg-black md:pt-0'>
+        <div className='relative w-screen aspect-video bg-black'>
              <VideoTitle title={original_title} overview={overview} />
             <VideoBackground movieId={id} />
         </div>
@@ -20,3 +22,4 @@ const MainConatiner = () => {
 }
 
 export default MainConatiner;
+

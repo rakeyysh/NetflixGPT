@@ -22,7 +22,7 @@ export const LOGO =
 
  
 
- console.log("TMDB Token:", process.env.REACT_APP_TMDB_BEARER);
+ //console.log("TMDB Token:", process.env.REACT_APP_TMDB_BEARER);
 
  export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 

@@ -1,4 +1,185 @@
+
+
+🎬 NetflixGPT
+
+A Netflix-inspired movie browsing app powered by Gemini AI for smart movie recommendations. Built with React, Firebase, Redux, and Tailwind CSS.
+
+
+🔗 Live Demo
+
+View Live App ← replace with your Vercel URL
+
+
+✨ Features
+
+🔐 Authentication
+
+
+Sign Up and Sign In with Email & Password
+Firebase Authentication
+Persistent login with onAuthStateChanged
+Protected routes — redirects to login if not authenticated
+
+
+🎥 Browse Page
+
+
+Auto-playing muted trailer as background video (via TMDB + YouTube)
+Movie title and description overlay
+Multiple movie lists — Now Playing, Popular, and more
+Responsive movie cards with TMDB poster images
+
+
+🤖 GPT Search (Gemini AI)
+
+
+Search for movies in natural language (e.g. "funny Bollywood movies from the 90s")
+Gemini AI suggests 5 relevant movies
+Each suggestion is fetched from TMDB and displayed as a movie list
+Multi-language support (English, Hindi, Spanish)
+
+
+
+🛠️ Tech Stack
+
+TechnologyPurposeReact 19Frontend UIRedux ToolkitState managementFirebaseAuthenticationTailwind CSSStylingTMDB APIMovie data & trailersGemini AI APIAI movie recommendationsReact Router v7NavigationVercelDeployment
+
+
+📁 Project Structure
+
+src/
+├── components/
+│   ├── Body.js              # App router setup
+│   ├── Header.js            # Navbar with auth & GPT toggle
+│   ├── Login.js             # Sign In / Sign Up form
+│   ├── Browse.js            # Main browse page
+│   ├── MainConatiner.js     # Hero section with trailer
+│   ├── VideoBackground.js   # YouTube trailer iframe
+│   ├── VideoTitle.js        # Movie title & description overlay
+│   ├── SecondaryContainer.js # Movie lists section
+│   ├── MovieList.js         # Horizontal scrollable movie list
+│   ├── MovieCard.js         # Individual movie poster card
+│   ├── GptSearch.js         # GPT search page wrapper
+│   ├── GptSearchBar.js      # Search input + Gemini API call
+│   └── GptMovieSuggestion.js # AI recommended movie lists
+├── hooks/
+│   ├── useNowPlayingMovies.js  # Fetches now playing movies
+│   ├── usePopularMovies.js     # Fetches popular movies
+│   └── useMovieTrailer.js      # Fetches trailer for a movie
+└── utils/
+    ├── appStore.js          # Redux store configuration
+    ├── userSlice.js         # User auth state
+    ├── moviesSlice.js       # Movies & trailer state
+    ├── gptSlice.js          # GPT search results state
+    ├── configSlice.js       # Language configuration
+    ├── firebase.js          # Firebase initialization
+    ├── constants.js         # API options, URLs, constants
+    ├── Validate.js          # Form validation logic
+    └── languageConstants.js # Multi-language text support
+
+
+🚀 Getting Started
+
+Prerequisites
+
+
+Node.js v18+
+A TMDB account → themoviedb.org
+A Firebase project → console.firebase.google.com
+A Gemini API key → aistudio.google.com
+
+
+Installation
+
+
+Clone the repository
+
+
+bashgit clone https://github.com/your-username/NetflixGPT.git
+cd NetflixGPT
+
+
+Install dependencies
+
+
+bashnpm install
+
+
+Create a .env file in the root directory:
+
+
+envREACT_APP_TMDB_BEARER=your_tmdb_bearer_token
+REACT_APP_GEMINI_KEY=your_gemini_api_key
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.firebasestorage.app
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+
+
+Start the development server
+
+
+bashnpm start
+
+Open http://localhost:3000 to view it in the browser.
+
+
+🌐 Deployment (Vercel)
+
+
+Push your code to GitHub (make sure .env is in .gitignore)
+Go to vercel.com and import your GitHub repo
+Add all environment variables from your .env file in the Vercel dashboard
+Click Deploy 🚀
+
+
+
+🔑 API Keys Setup
+
+KeyWhere to get itREACT_APP_TMDB_BEARERthemoviedb.org → Settings → API → Bearer TokenREACT_APP_GEMINI_KEYaistudio.google.com → Get API KeyFirebase keysconsole.firebase.google.com → Project Settings → Your Apps
+
+
+📸 Screenshots
+
+ Login Page
+![Login Page](public/screenshots/Login.png)
+
+ Browse Page
+![Browse Page](public/screenshots/Browse.png)
+
+ GPT Search
+![GPT Search](public/screenshots/Gemini-Search.png)
+
+
+🙋‍♂️ Author
+
+Rakesh — GitHub · LinkedIn
+
+
+📄 License
+
+This project is for educational purposes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+
 ...
+# 📝 Development Notes
+
 # Netflix GPT
 
  - Create React App

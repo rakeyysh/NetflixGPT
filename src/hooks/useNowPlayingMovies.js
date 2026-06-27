@@ -21,6 +21,7 @@ import { addNowPlayingMovies } from "../utils/moviesSlice";
     // make calls only when NO movies inside our redux store.
     if(!nowPlayingMovies) 
     getNowPlayingMovies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
 };

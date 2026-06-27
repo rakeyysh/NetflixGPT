@@ -13,19 +13,25 @@ const useMovieTrailer = (movieId) => {
     const getMovieVideos = async () => {
       const data = await fetch('https://api.themoviedb.org/3/movie/'+movieId+'/videos?language=en-US', API_OPTIONS);
       const json = await data.json();
-      // console.log(json);
-  
-      const filterData = json.results.filter((video) => video.type == "Trailer");
-      const trailer = filterData.length ? filterData[1] : json.results[0];
-      // console.log(trailer);
-      dispatch(addTrailerVideo(trailer));
+        
+       console.log("result",json.results);
+      const filterData = json.results.filter((video) => video.type === "Trailer") || json.results.filter((video) => video.type === "Teaser")
+                          
+      console.log("filterdata",filterData);
+      const trailer = filterData.length ? filterData[0] : json.results[0];
+      //console.log("trailer",trailer);
+   
+     if(trailer) {  // ✅ only dispatch if something found
+    dispatch(addTrailerVideo(trailer));
+}
   
     };
   
     useEffect(() => {
       if(!trailerVideo)
       getMovieVideos();
-    }, []);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [movieId]);
 }
 
 export default useMovieTrailer

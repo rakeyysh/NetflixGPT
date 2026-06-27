@@ -4,11 +4,16 @@ import useMovieTrailer from "../hooks/useMovieTrailer";
 
 
 const VideoBackground = ({movieId}) => {
+  //console.log("VideoBackground movieId:", movieId); // add this
 
 const trailerVideo = useSelector(store =>store.movies?.trailerVideo);
+//console.log("Trailer Video:", trailerVideo); // Add this line
 
 useMovieTrailer(movieId);
- 
+
+  if(!trailerVideo) return null;
+
+
 
   return (
     <div className="w-screen">
@@ -20,7 +25,7 @@ useMovieTrailer(movieId);
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
      >
       </iframe>
-    </div>
+    </div> 
   )
 }
 

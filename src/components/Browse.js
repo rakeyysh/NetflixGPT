@@ -15,19 +15,16 @@ const Browse = () => {
   usePopularMovies();
 
 
-   {/*
-       
-        MainContainer
-         - VideoBackground
-         - VideoTitle
-
-         SecondaryContainer
-         - MovieList * n
-          - cards * n
-      
-       
-       
-       */}
+   
+   //
+   // MainContainer
+   //  - VideoBackground
+   //  - VideoTitle
+   //
+   // SecondaryContainer
+   //  - MovieList * n
+   //   - cards * n
+   
   return (
     <div>
         <Header/>
